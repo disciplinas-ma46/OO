@@ -1,0 +1,2 @@
+module ComoFuncionaHelper
+end

@@ -1,0 +1,2 @@
+class MeusIten < ApplicationRecord
+end

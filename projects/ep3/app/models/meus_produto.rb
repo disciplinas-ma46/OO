@@ -1,0 +1,2 @@
+class MeusProduto < ApplicationRecord
+end

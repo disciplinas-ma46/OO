@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dia de Doar</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+     <div class="container">
+       <%= link_to "Dia De Doar", '/', id: "logo" %>
+       <nav>
+         <ul class="nav navbar-nav navbar-right">
+           <li><%= link_to "Página inicial",   root_path %></li>
+           <li><%= link_to "Produtos",   products_path %></li>
+           <li><%= link_to "Como Funciona",   como_funciona_index_path %></li>
+
+
+
+	        <% if user_signed_in? %>
+           		<li><%= link_to "Meu Perfil",   meu_perfil_index_path %></li>
+		<% else %>
+           		<li><%= link_to "Cadastrar",   new_user_registration_path %></li>
+
+           		<li><%= link_to "Entrar",   user_session_path %></li>
+		<% end %>
+
+         </ul>
+       </nav>
+     </div>
+   </header>
+   <div class="container">
+     <%= yield %>
+  </body>
+</html>
