@@ -1,2 +1,0 @@
-class EuQueroController < ApplicationController
-end

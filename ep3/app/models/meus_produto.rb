@@ -1,2 +1,0 @@
-class MeusProduto < ApplicationRecord
-end
